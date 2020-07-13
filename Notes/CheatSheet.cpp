@@ -4,7 +4,7 @@
 int incrementUsingPointer(int* x);
 int incrementUsingReference(int& x);
 
-int main() {
+int mainCheatSheet() {
 
     /* Header Start */
     // Header Files - They only contain definition and not the actual declaration. Consider them as import statements in Java and Javascript although they really aren't.
@@ -54,6 +54,8 @@ int main() {
     std::cout << incrementUsingReference(c) << std::endl;
 
     /* References End */
+
+    return 0;
 
 }
 

@@ -1,3 +1,7 @@
+// TODO:
+// 1. Fix all return types. Is void needed everywhere?
+// 2. Fix to accept dynamic types instead of just int - Solution is to use the generic void*.
+
 #include <iostream>
 #include "LinkedList.h"
 
@@ -23,9 +27,12 @@ struct List* list = new List;
 
 insertAtTail(list, 2);
 insertAtTail(list, 3);
+//insertAtHead(list, 1);
+deleteAtHead(list);
 
 cout << list->head->item << endl;
 cout << list->head->next->item << endl;
+cout << list->head->next->next->item << endl;
 
 }
 
@@ -49,12 +56,49 @@ void insertAtTail(struct List* list, int data) {
 
 }
 
-void insertAtHead(struct Node* node, int data) {
+void insertAtHead(struct List* list, int data) {
 
+    struct Node* nodeToBeInserted = new Node;
 
+    nodeToBeInserted->item = data;
+    nodeToBeInserted->next = nullptr;
+
+    if(list->head == nullptr) {
+        list->head = nodeToBeInserted;
+    }
+    else {
+        nodeToBeInserted->next = list->head;
+        list->head = nodeToBeInserted;
+    }
 
 }
 
 void insertAnywhere() {
+
+}
+
+void deleteAtHead(List* list) {
+
+    struct Node* node;
+    if(list->head->next == nullptr){
+        free(list->head);
+    }
+    else {
+        node = list->head;
+        list->head = list->head->next;
+        free(node);
+    }
+
+}
+
+void deleteAtTail(List* list) {
+
+    struct Node* node;
+    struct Node* trace;
+
+    trace=list->head;
+    while(trace->next != nullptr) {
+        trace = trace->next;
+    }
 
 }

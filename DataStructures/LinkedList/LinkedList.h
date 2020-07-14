@@ -5,6 +5,8 @@
 #ifndef UNTITLED_LINKEDLIST_H
 #define UNTITLED_LINKEDLIST_H
 
-void insertAtTail(struct List* node, int x);
+void insertAtTail(struct List* node, int data);
+void insertAtHead(struct List* list, int data);
+void deleteAtHead(List* list);
 
 #endif //UNTITLED_LINKEDLIST_H

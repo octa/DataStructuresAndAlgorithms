@@ -21,7 +21,7 @@ struct List { // This structure is used to keep a track of the head. Reasoning -
     struct Node* head;
 };
 
-int main() {
+int mains22() {
 
 struct List* list = new List;
 

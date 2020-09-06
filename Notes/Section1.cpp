@@ -3,22 +3,43 @@
 //
 
 #include <iostream>
+#include <string>
+
+using namespace std;
+using std::string;
 
 struct User {
     int age;
     int id;
 };
 
+void octa();
 void pointers();
 void structs();
 void arraycreationusingnew();
+void functionreferences(int& x);
 
 int main() {
 
+    // Functions
     pointers();
     structs();
     arraycreationusingnew();
-    
+
+    int x = 10;
+    functionreferences(x);
+    // Functions
+
+}
+
+void octa() {
+
+    std::cout << "*********************** Starting Octa ***********************" << std::endl;
+
+
+
+    std::cout << "\n*********************** Ending Octa ***********************\n";
+
 }
 
 void pointers () {
@@ -81,3 +102,15 @@ void arraycreationusingnew() {
 
 }
 
+void functionreferences(int& x) { // Another way to modify the actual variable without a pointer. This is equal to pass by reference.
+
+    std::cout << "*********************** Starting Octa ***********************" << std::endl;
+
+    cout << "x in octa() is " << x << endl;
+    x = 100;
+    cout << "x in octa() modified is " << x << endl;
+
+
+    std::cout << "\n*********************** Ending Octa ***********************\n";
+
+}

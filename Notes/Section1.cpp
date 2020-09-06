@@ -11,7 +11,7 @@ struct User {
 
 int main() {
 
-    //Pointers
+    // *********************** Pointers ***********************
 
     char c[ ] = {'x', 'a', 'c'};
     char* p = c;
@@ -20,13 +20,13 @@ int main() {
     int x = 10;
     int* y = &x;
 
-    std::cout << p[0] << std::endl;
+    std::cout << p[0] << q[0] << std::endl;
 
-    //std::cout << c[2] << p[2] << q[2];
+    std::cout << c[2] << p[2] << q[2];
 
-    //Pointers
+    // *********************** Pointers ***********************
 
-    //Struct
+    // *********************** Struct ***********************
 
     User* user = new User;
     user->id=10;
@@ -52,6 +52,24 @@ int main() {
     User user4 = {100, 100};
 
     std::cout << user4.id << user4.age <<std::endl;
+
+    //Accessing fields within a Struct if you have a pointer to the struct
+    user->id;
+    (*user).id;
+
+    //Destroy an object allocated through "new" and return the memory to the free store.
+    delete user; //The delete operator should only be applied to objects that have been allocated through new.
+
+    // *********************** Struct ***********************
+
+    // *********************** Array creation using new ***********************
+
+    //Arrays can also be allocated with new. When this is done, the system allocator returns a pointer to the first element of the array.
+    char* buffer = new char[500]; // allocate a buffer of 500 chars
+    buffer[3] = 'a'; // elements are still accessed using [ ]
+    delete [] buffer; // delete the buffer
+
+    // *********************** Array creation using new ***********************
 
 
 

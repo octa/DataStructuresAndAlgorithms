@@ -9,9 +9,19 @@ struct User {
     int id;
 };
 
+void pointers();
+void structs();
+void arraycreationusingnew();
+
 int main() {
 
-    // *********************** Pointers ***********************
+    pointers();
+    structs();
+    arraycreationusingnew();
+    
+}
+
+void pointers () {
 
     char c[ ] = {'x', 'a', 'c'};
     char* p = c;
@@ -24,9 +34,9 @@ int main() {
 
     std::cout << c[2] << p[2] << q[2];
 
-    // *********************** Pointers ***********************
+}
 
-    // *********************** Struct ***********************
+void structs() {
 
     User* user = new User;
     user->id=10;
@@ -60,18 +70,14 @@ int main() {
     //Destroy an object allocated through "new" and return the memory to the free store.
     delete user; //The delete operator should only be applied to objects that have been allocated through new.
 
-    // *********************** Struct ***********************
+}
 
-    // *********************** Array creation using new ***********************
+void arraycreationusingnew() {
 
     //Arrays can also be allocated with new. When this is done, the system allocator returns a pointer to the first element of the array.
     char* buffer = new char[500]; // allocate a buffer of 500 chars
     buffer[3] = 'a'; // elements are still accessed using [ ]
     delete [] buffer; // delete the buffer
-
-    // *********************** Array creation using new ***********************
-
-
 
 }
 

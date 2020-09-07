@@ -18,8 +18,9 @@ void pointers();
 void structs();
 void arraycreationusingnew();
 void functionreferences(int& x);
+void differentwaysofcreatinganobject();
 
-int main() {
+int mainx1() {
 
     // Functions
     pointers();
@@ -28,6 +29,8 @@ int main() {
 
     int x = 10;
     functionreferences(x);
+
+    differentwaysofcreatinganobject();
     // Functions
 
 }
@@ -112,5 +115,21 @@ void functionreferences(int& x) { // Another way to modify the actual variable w
 
 
     std::cout << "\n*********************** Ending Octa ***********************\n";
+
+}
+
+void differentwaysofcreatinganobject() {
+
+    /*
+    Passenger p1;
+    Passenger p2("John Smith", VEGETARIAN, 293145);
+    Passenger p3("Pocahontas", REGULAR);
+    Passenger p4(p3);
+    Passenger p5 = p2;
+    Passenger* pp1 = new Passenger;
+    Passenger* pp2 = new Passenger("JoeBlow", NO PREF);
+    Passenger pa[20];
+    */
+
 
 }

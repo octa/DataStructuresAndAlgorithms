@@ -47,7 +47,7 @@ string Student::getName() {
 
 // ************************************************************
 
-int main() {
+int mainx2() {
 
     string octa = "Octa";
     string gender = "Guy";

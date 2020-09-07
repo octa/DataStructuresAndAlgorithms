@@ -22,6 +22,8 @@ string Human::getGender() {
     return gender;
 }
 
+// ************************************************************
+
 class Student:public Human {
 private:
     string name;
@@ -43,6 +45,7 @@ string Student::getName() {
     return name;
 }
 
+// ************************************************************
 
 int main() {
 
